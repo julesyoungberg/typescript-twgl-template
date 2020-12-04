@@ -7,6 +7,7 @@
   },
   "rules": {
     "@typescript-eslint/no-use-before-define": "error",
+    "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "max-len": ["error", { "code": 100, "ignoreUrls": true }],
