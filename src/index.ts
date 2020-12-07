@@ -3,7 +3,7 @@ import * as twgl from 'twgl.js';
 const basicVertShader = require('./shaders/basic.vert');
 const basicFragShader = require('./shaders/basic.frag');
 
-const gl = (document.getElementById('canvas') as any).getContext('webgl');
+const gl: WebGLRenderingContext = (document.getElementById('canvas') as any).getContext('webgl2');
 const programInfo = twgl.createProgramInfo(gl, [basicVertShader, basicFragShader]);
 
 const arrays = {
@@ -12,7 +12,7 @@ const arrays = {
 const bufferInfo = twgl.createBufferInfoFromArrays(gl, arrays);
 
 function render(time: number) {
-    twgl.resizeCanvasToDisplaySize(gl.canvas);
+    twgl.resizeCanvasToDisplaySize(gl.canvas as HTMLCanvasElement);
     gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
 
     const uniforms = {
