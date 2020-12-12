@@ -10,9 +10,16 @@
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
+    "default-case": "warn",
+    "lines-between-class-members": "off",
     "max-len": ["error", { "code": 100, "ignoreUrls": true }],
+    "no-alert": "off",
+    "no-bitwise": "off",
     "no-console": "off",
     "no-continue": "off",
-    "no-plusplus": "off"
+    "no-plusplus": "off",
+    "no-sequences": "off",
+    "no-unused-expressions": "warn",
+    "no-useless-constructor": "warn"
   }
 }
