@@ -1,6 +1,11 @@
 #version 300 es
-precision highp float;
 
 in vec4 position;
+out vec2 uv;
 
-void main() { gl_Position = position; }
+uniform vec2 resolution;
+
+void main() {
+    uv = position.xy * 0.5 + 0.5;
+    gl_Position = position;
+}
