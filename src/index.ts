@@ -16,7 +16,6 @@ function render(time: number) {
     gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
 
     const uniforms = {
-        time: time * 0.001,
         resolution: [gl.canvas.width, gl.canvas.height],
     };
 
