@@ -1,13 +1,13 @@
 #version 300 es
 precision highp float;
 
+in vec2 uv;
 out vec4 fragColor;
 
 uniform vec2 resolution;
 uniform float time;
 
 void main() {
-    vec2 uv = gl_FragCoord.xy / resolution;
     float color = 0.0;
     // lifted from glslsandbox.com
     color += sin(uv.x * cos(time / 3.0) * 60.0) + cos(uv.y * cos(time / 2.80) * 10.0);
